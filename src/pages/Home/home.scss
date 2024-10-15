@@ -1,0 +1,19 @@
+@import '../../sass/variables.scss';
+
+.logement-card-container {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: $greyKasa;
+    border-radius: 1.5rem;
+    padding-top: 3.1rem;
+    row-gap: 3.1rem;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    transition-duration: .3s;
+
+    @include mobile-breakpoint {
+        background-color: $whiteKasa;
+        row-gap: 1.3rem;
+        padding-top: 0;
+    }
+}

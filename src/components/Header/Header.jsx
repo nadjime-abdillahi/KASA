@@ -1,24 +1,26 @@
-import * as React from "react";
-import './Header.css';
-import { Link } from 'react-router-dom';
-import logo2 from '../../img/LOGO.png';
+import { NavLink, Link } from 'react-router-dom'
+import './header.scss'
+import kasaLogo from '../../assets/logo.svg'
 
-export default function header () {
+
+function Header() {
+
     return (
-        <header className="App-header">
-            <div>
-            <img src={logo2} alt='logo'/>
-            <nav>
-                <ul>
-                <li>
-                    <Link to="/">Acceuil</Link>
-                </li>
-                <li>
-                    <Link to="/about">À propos</Link>
-                </li>
-                </ul>
+        <header className='nav-container'>
+            <Link to="/">
+                <img className='nav-logo' src={kasaLogo} alt='Logo de Kasa'></img>
+            </Link>
+            <nav className='nav'>
+                <NavLink className={({ isActive }) => isActive ? 'nav-active' : 'nav-link'} to="/">
+                    Accueil
+                </NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'nav-active' : 'nav-link'} to="/a-propos">
+                    A Propos
+                </NavLink>
             </nav>
-            </div>
         </header>
     )
+
 }
+
+export default Header;

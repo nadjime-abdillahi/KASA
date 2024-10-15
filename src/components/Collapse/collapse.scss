@@ -1,0 +1,102 @@
+@import '../../sass/variables.scss';
+
+.collapse {
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    transition-duration: .3s;
+
+    @include mobile-breakpoint {
+        width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+
+    &-button {
+        height: 3.3rem;
+        background-color: $mainKasa;
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: 0.3rem;
+        padding-left: 1rem;
+        z-index: 1;
+        user-select: none;
+        cursor: pointer;
+        transition: filter 0.3s;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+
+        @include mobile-breakpoint {
+            height: 1.8rem;
+        }
+    }
+
+    &-title {
+        color: $whiteKasa;
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        @include mobile-breakpoint {
+            font-size: 0.8rem;
+        }
+    }
+
+    &-arrow {
+        height: 0.8rem;
+        position: absolute;
+        right: 0;
+        width: auto;
+        padding: 1rem;
+        transition: transform 0.3s;
+
+        @include mobile-breakpoint {
+            height: 0.6rem;
+        }
+    }
+
+    .rotate {
+        transform: rotate(180deg);
+    }
+
+    &-content {
+        background-color: $greyKasa;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-50%);
+        transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    &-txt {
+        margin: 0;
+        padding: 1rem;
+        font-size: 1.2rem;
+
+        @include mobile-breakpoint {
+            font-size: 0.8rem;
+        }
+    }
+
+    .active {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    &-list {
+        padding: 1rem;
+        margin: 0;
+        list-style: none;
+
+        &-item {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+
+            @include mobile-breakpoint {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

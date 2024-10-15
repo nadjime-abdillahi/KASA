@@ -1,20 +1,17 @@
-import React from "react";
-import './Banner.css';
-// import MaskGroup from "../img/Mask_Group.png"
+import './banner.scss'
+import { useLocation } from 'react-router-dom';
 
-function Banner({image, title}) {
-    let divTitle;
-    if(title) {
-        divTitle = <div className="centered">{title}</div>;
-    }
+function Banner({ cover, title }) {
+
+    const location = useLocation();
+    const imgClassName = location.pathname === "/" ? "banner-bg filter-bg" : "banner-bg";
+
     return (
-        <div id="banner">
-            <img src={image} alt="bannière" />
-
-            {divTitle}
+        <div className="banner">
+            <img className={imgClassName} src={cover} alt='Paysage'></img>
+            <h1 className="banner-title">{title}</h1>
         </div>
-
     )
 }
 
-export default Banner;
+export default Banner

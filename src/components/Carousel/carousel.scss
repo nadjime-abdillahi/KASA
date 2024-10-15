@@ -1,0 +1,73 @@
+@import '../../sass/variables.scss';
+
+.carousel {
+    width: 100%;
+    height: 26rem;
+    position: relative;
+
+    @include mobile-breakpoint {
+        height: 16rem;
+    }
+
+    &-arrow-left {
+        position: absolute;
+        height: 5rem;
+        left: 1.4rem;
+        width: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform .3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        @include mobile-breakpoint {
+            height: 1.2rem;
+        }
+    }
+
+    &-arrow-right {
+        position: absolute;
+        height: 5rem;
+        right: 1.4rem;
+        width: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform .3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        @include mobile-breakpoint {
+            height: 1.2rem;
+        }
+    }
+
+    &-img {
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+
+
+    &-counter {
+        position: absolute;
+        color: $whiteKasa;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../sass/variables.scss';
+
+.footer-container {
+    background-color: $blackKasa;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+
+    .footer-logo {
+        margin-top: 3.8rem;
+        width: auto;
+        height: 3.8rem;
+
+        @include mobile-breakpoint {
+            height: 2.4rem;
+        }
+    }
+
+    .footer-txt {
+        margin-top: 2.5rem;
+        color: $whiteKasa;
+        font-weight: 500;
+        font-size: 1.5rem;
+
+        @include mobile-breakpoint {
+            margin-top: 1.2rem;
+            width: 33%;
+            text-align: center;
+            height: 2.4rem;
+            font-size: 0.75rem;
+        }
+    }
+}
