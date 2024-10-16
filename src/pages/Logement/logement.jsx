@@ -13,7 +13,7 @@ function Logement() {
 
     document.title = 'Kasa - Logement'
 
-    const { data, loading, error } = useFetch("logemnts.json");
+    const { data, loading, error } = useFetch("https://kasa-lake-iota.vercel.app/logements.json");
     const { id } = useParams();
 
     if (loading) {
