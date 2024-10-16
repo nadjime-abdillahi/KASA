@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/home';
 import Header from './components/Header/header';
-import './sass/base.scss'
+import './sass/base.scss';
 import Footer from './components/Footer/footer';
 import Apropos from './pages/A-propos/apropos';
 import Error404 from './pages/404/error404';
-import Logement from './pages/Logement/logement'
+import Logement from './pages/Logement/logement';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

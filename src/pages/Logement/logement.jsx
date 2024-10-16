@@ -13,7 +13,7 @@ function Logement() {
 
     document.title = 'Kasa - Logement'
 
-    const { data, loading, error } = useFetch("https://marsodeb-kasa.vercel.app/annonces.json");
+    const { data, loading, error } = useFetch("logemnts.json");
     const { id } = useParams();
 
     if (loading) {
