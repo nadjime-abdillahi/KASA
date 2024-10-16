@@ -11,7 +11,7 @@ function Home() {
 
   document.title = 'Kasa - Home'
 
-  const { data, loading, error } = useFetch('https://kasa-arzuh2bdf-nadjime-abdillahis-projects.vercel.app/logements.json')
+  const { data, loading, error } = useFetch('https://kasa-lake-iota.vercel.app//logements.json')
 
   if (loading) {
     return (
