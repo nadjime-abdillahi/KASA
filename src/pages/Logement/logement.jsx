@@ -1,30 +1,21 @@
 import Carousel from '../../components/Carousel/carousel';
 import '../../sass/base.scss';
 import './logement.scss';
-import useFetch from '../../utils/useFetch';
 import { useParams } from "react-router-dom";
 import Collapse from '../../components/Collapse/collapse';
 import Rating from '../../components/Rating/rating';
 import Keyword from '../../components/Keyword/keyword';
 import React from 'react';
-import Loading from '../../components/Loading/loading';
+import data from '../../assets/logements.json';
 
 function Logement() {
 
     document.title = 'Kasa - Logement'
 
-    const { data, loading, error } = useFetch("https://kasa-lake-iota.vercel.app/logements.json");
+   // const { data, loading, error } = useFetch("https://kasa-lake-iota.vercel.app/logements.json");
     const { id } = useParams();
 
-    if (loading) {
-        return (
-            <Loading />
-        )
-    }
 
-    if (error) {
-        return <p>Une erreur est survenue : {error.message}</p>;
-    }
 
     const response = data.find(item => item.id === id);
 

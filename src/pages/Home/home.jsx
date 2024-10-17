@@ -4,25 +4,13 @@ import './home.scss';
 import homebg from '../../assets/home_bg.jpg';
 import Banner from '../../components/Banner/banner';
 import Card from '../../components/Cards/card';
-import useFetch from '../../utils/useFetch';
-import Loading from '../../components/Loading/loading';
+import data from '../../assets/logements.json';
 
 function Home() {
 
   document.title = 'Kasa - Home'
 
-  const { data, loading, error } = useFetch('https://kasa-lake-iota.vercel.app/logements.json')
-
-  if (loading) {
-    return (
-      <Loading />
-    )
-  }
-
-  if (error) {
-    return <p>Une erreur est survenue : {error.message}</p>;
-  }
-
+  
   return (
     <section className="home">
       <Banner
