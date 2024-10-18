@@ -1,12 +1,13 @@
 import Carousel from '../../components/Carousel/carousel';
 import '../../sass/base.scss';
 import './logement.scss';
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import Collapse from '../../components/Collapse/collapse';
 import Rating from '../../components/Rating/rating';
 import Keyword from '../../components/Keyword/keyword';
 import React from 'react';
 import data from '../../assets/logements.json';
+import Error from '../404/error404';
 
 function Logement() {
 
@@ -20,7 +21,7 @@ function Logement() {
     const response = data.find(item => item.id === id);
 
     if (!response) {
-        return <p>Aucune annonce trouvée pour cet ID.</p>;
+        return <Error />
     }
 
     return (

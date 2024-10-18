@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home/home';
 import Header from './components/Header/header';
 import './sass/base.scss';

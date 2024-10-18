@@ -23,20 +23,28 @@ function Carousel({ img }) {
         }, 200);
     };
 
+    const hasSingleImage = img.length === 1;
+
     if (!img || img.length === 0) {
         return <p>Aucune image disponible.</p>;
     }
 
     return (
         <div className='carousel'>
+            {!hasSingleImage && (
             <img className='carousel-arrow-left' src={arrow_left} alt='Précédent' onClick={prevImage} />
+            )}
+            {!hasSingleImage && (
             <img className='carousel-arrow-right' src={arrow_right} alt='Suivante' onClick={nextImage} />
+            )}
             <img
                 className={`carousel-img ${!isAnimating ? 'active' : ''}`}
                 src={img[currentIndex]}
                 alt={`${currentIndex + 1}`}
             />
+            {!hasSingleImage && (
             <span className='carousel-counter'>{currentIndex + 1} / {img.length}</span>
+            )}
         </div>
     );
 }
