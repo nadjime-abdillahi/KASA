@@ -9,6 +9,8 @@
     background-color: $mainKasa;
     border-radius: 0.6rem;
     user-select: none;
+    margin-left: 35px;
+    margin-right: 35px;
 
     @include mobile-breakpoint {
         width: auto;
@@ -32,6 +34,6 @@
         color: $whiteKasa;
         font-size: 1.1rem;
         padding: 20px;
-        text-shadow: 0px 0px 5px rgba(66, 68, 90, 1);
+        text-shadow: 5px 5px 5px rgba(66, 68, 90, 1);
     }
 }

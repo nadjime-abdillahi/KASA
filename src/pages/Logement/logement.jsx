@@ -35,7 +35,7 @@ function Logement() {
                         <p className='location'>{response.location}</p>
                     </div>
                     <div className='keyword'>
-                        {response.tags.map((item, index) => (
+                        {response.tags.map(( index) => (
                             <Keyword
                                 key={index}
                                 word={response.tags[index]}
